@@ -1,0 +1,42 @@
+
+<div class="container" *ngIf="events.length > 0">
+    <div class="container__top">
+        <h3 class="container__top__filter" [ngClass]="{'selected': this.category.all}" (click)="filterSelected('all')">ALL EVENTS</h3>
+        <h3 class="container__top__filter" [ngClass]="{'selected': this.category.music}" (click)="filterSelected('music')">LIVE MUSIC</h3>
+        <h3 class="container__top__filter" [ngClass]="{'selected': this.category.coding}" (click)="filterSelected('coding')">CODING</h3>
+    </div>
+
+    <div class="container__bottom">
+
+        <div class="box" *ngFor="let event of showEvents">
+            <div class="box__top">
+                <img class="box__top__img" src="{{ event.imgURL }}" alt="{{ event.title }}">
+            </div>
+
+            <div class="box__bottom">
+                <div class="box__title">
+                    <h2>{{ this.truncate(event.title, 25) }}</h2>
+                </div>
+    
+                <div class="box__date">
+                    <h3>{{ event.date }}</h3>
+                </div>
+    
+                <div class="box__more-info">
+                    <a  [routerLink]="['/info', event.id]" id="info-btn">MORE INFO</a>
+                    <button class="btn-delete" (click)="onDelete(event.id)">delete</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+    </div>
+</div>
+
+
+
+<div id="noEvents">
+    <p *ngIf="events.length <=0" >no event added</p>
+</div>

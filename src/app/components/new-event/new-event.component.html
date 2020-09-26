@@ -1,0 +1,32 @@
+<div class="center">
+<form class="login-form" (submit)="addSaveEvent(addEventForm)" #addEventForm="ngForm">
+    <h1>ADD EVENT</h1>
+    <div class="form-input-material">
+        <label>EVENT TITLE</label>
+        <input type="text"  class="form-control-material" name="title" [ngModel]="event.title" required>
+    </div>
+    <div class="form-input-material">
+        <label>DATE</label>
+        <input type="text"  class="form-control-material"  name="date" [ngModel]="event.date" required>
+    </div>
+
+    <div class="form-input-material">
+        <label>CATEGORY</label>
+        <input type="text"  class="form-control-material" name="category" [ngModel]="event.category" required>
+    </div>
+
+    <div class="form-input-material">
+        <label>IMAGE URL</label>
+        <input type="text"  class="form-control-material" name="imgUrl" [ngModel]="event.imgURL" required>
+    </div>
+
+    <div class="form-input-material">
+        <label>MORE INFO</label>
+        <textarea rows="4" cols="30" name="info" [ngModel]="event.info" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">SUBMIT</button>
+    <button type="button" class="btn btn-red" routerLink="/">BACK TO HOME PAGE</button>
+  </form>
+
+</div>

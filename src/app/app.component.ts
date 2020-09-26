@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'eventApp';
+  // showEvents: boolean = true;
+  // showAddEvent: boolean = false;
+
+  change() {
+    // this.showEvents = !this.showEvents;
+    // this.showAddEvent = !this.showAddEvent;
+  }
 }

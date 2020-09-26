@@ -1,0 +1,68 @@
+.box {
+    
+    width: calc(50% - 30px);
+    height: auto;
+    border: 2px solid #0D0D0D;
+    margin: 0 auto;
+
+    &__top{
+        height: 65%;
+        margin-bottom: .8rem;
+
+        &__img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__bottom {
+        height: 35%;
+        padding-left: .5rem;
+        & > div {
+            margin-bottom: .4rem;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+    }
+
+    &__date {
+        font-size: .8rem;
+    }
+
+    &__more-info {
+
+        &-text {
+            font-size: .9rem;
+            color:#0D0D0D;
+        }
+    }
+}
+
+
+.btn {
+    color: #fff;
+    padding: 2.5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all .2s ease;
+}
+
+
+.btn-delete {
+    background-color: rgba(255, 0, 0, 0.849);
+    &:hover {
+        background-color: rgba(240, 13, 13, 0.911);
+    }
+}
+
+.btn-edit {
+    margin-right: 10px;
+    background-color: rgba(255, 166, 0, 0.747);
+    &:hover {
+        background-color:  rgb(255, 166, 0);
+    } 
+}
